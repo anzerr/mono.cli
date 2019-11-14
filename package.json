@@ -1,0 +1,45 @@
+{
+	"name": "mono.cli",
+	"version": "1.0.0",
+	"keywords": [],
+	"homepage": "https://github.com/anzerr/mono.cli#readme",
+	"bugs": {
+		"url": "https://github.com/anzerr/mono.cli/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:anzerr/mono.cli.git"
+	},
+	"license": "MIT",
+	"author": "anzerr",
+	"main": "index.js",
+	"types": "index.d.ts",
+	"bin": {
+		"mono": "./index.js"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"eslintConfig": {
+		"extends": "eslint-config-basic"
+	},
+	"dependencies": {
+		"console.color": "git+https://git@github.com/anzerr/console.color.git",
+		"cli.util": "git+https://git@github.com/anzerr/cli.util.git",
+		"fs.hash": "git+https://git@github.com/anzerr/fs.hash.git",
+		"fs.mkdirp": "git+https://github.com/anzerr/fs.mkdirp.git",
+		"fs.promisify": "git+https://git@github.com/anzerr/fs.promisify.git",
+		"fs.remove": "git+https://github.com/anzerr/fs.remove.git",
+		"promise.util": "git+https://git@github.com/anzerr/promise.util.git",
+		"request.libary": "git+https://github.com/anzerr/request.libary.git",
+		"think.library": "git+https://github.com/anzerr/think.library.git",
+		"unique.util": "git+https://github.com/anzerr/unique.util.git"
+	},
+	"devDependencies": {
+		"eslint-config-basic": "git+https://git@github.com/anzerr/eslintrc.git"
+	},
+	"engines": {
+		"node": ">= 0.10.0"
+	},
+	"description": ""
+}
