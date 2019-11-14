@@ -80,7 +80,7 @@ class Project {
 					remove(path.join(this.cwd, 'node_modules'))
 				]);
 			}).then(() => {
-				return this.util.exec(`npm i --only=prod --registry ${this.config.npm}`, {cwd: this.cwd});
+				return this.util.exec(`npm i ${(this.config.prod) ? '--only=prod ' : ''}--registry ${this.config.npm}`, {cwd: this.cwd});
 			}).then(() => {
 				return this.util.exec('npm run clean --if-present && npm run build --if-present', {cwd: this.cwd});
 			}).then(() => {

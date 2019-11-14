@@ -1,6 +1,7 @@
 {
 	"name": "mono.cli",
 	"version": "1.0.0",
+	"description": "Cli to help working on monorepos",
 	"keywords": [],
 	"homepage": "https://github.com/anzerr/mono.cli#readme",
 	"bugs": {
@@ -40,6 +41,5 @@
 	},
 	"engines": {
 		"node": ">= 0.10.0"
-	},
-	"description": ""
+	}
 }
