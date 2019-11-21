@@ -20,7 +20,7 @@ class Git {
 			console.log('cloned');
 			return this.publish(`${this.config.tmp}/${pack[0]}`);
 		}).then(() => {
-			return this.getPackage(repo);
+			return this.util.package(repo);
 		}).then((res) => {
 			let version = `${res.version}-${this.config.version}`;
 			return this.latest(pack[0]).then((v) => {
