@@ -23,7 +23,7 @@ class Git {
 			return this.util.package(repo);
 		}).then((res) => {
 			let version = `${res.version}-${this.config.version}`;
-			return this.latest(pack[0]).then((v) => {
+			return this.util.latest(pack[0]).then((v) => {
 				if (v === version) {
 					throw new Error('skip');
 				}
