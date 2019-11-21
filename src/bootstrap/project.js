@@ -38,7 +38,13 @@ class Project {
 				return res;
 			});
 		}).then((res) => {
-			let git = new Git(this.core);
+			let git = new Git({
+				config: {
+					...this.core.config,
+					filter: null
+				},
+				util: this.core.util
+			});
 			return git.run(this.cwd).then(() => res);
 		}).then((res) => {
 			const wait = [], values = ['dependencies', 'devDependencies'], change = {};
