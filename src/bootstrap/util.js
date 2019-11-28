@@ -5,13 +5,20 @@ const fs = require('fs.promisify'),
 	color = require('console.color'),
 	remove = require('fs.remove'),
 	promise = require('promise.util'),
-	path = require('path');
+	path = require('path'),
+	key = require('unique.util');
+
+const alpha = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 class Util {
 
 	constructor(config) {
 		this.config = config;
 		this.version = {};
+	}
+
+	key(n = 8) {
+		return key.random({length: n, char: alpha});
 	}
 
 	latest(name) {

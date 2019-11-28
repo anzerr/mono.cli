@@ -3,8 +3,7 @@ const fs = require('fs.promisify'),
 	path = require('path'),
 	remove = require('fs.remove'),
 	Git = require('./git.js'),
-	promise = require('promise.util'),
-	key = require('unique.util');
+	promise = require('promise.util');
 
 class Project {
 
@@ -15,7 +14,7 @@ class Project {
 		this.pack = pack;
 		this.cwd = cwd;
 		this.done = false;
-		this.key = key.random({length: 8, char: '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'});
+		this.key = this.util.key();
 	}
 
 	publish() {
@@ -80,6 +79,11 @@ class Project {
 				});
 			}, 1).then(() => {
 				console.log('updating package', res.name, change);
+				if (this.config.skip && this.cwd.match(this.config.skip)) {
+					return fs.writeFile(path.join(this.cwd, 'package.json'), JSON.stringify(res, null, '\t')).then(() => {
+						throw new Error('package skipped');
+					});
+				}
 				return Promise.all([
 					fs.writeFile(path.join(this.cwd, 'package.json'), JSON.stringify(res, null, '\t')),
 					remove(path.join(this.cwd, 'package-lock.json')),

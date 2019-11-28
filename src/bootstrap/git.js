@@ -76,6 +76,7 @@ class Git {
 				throw err;
 			}
 		}).then(() => {
+			version = repo.version || version;
 			this._done[pack[0]] = version;
 			this.util.version[pack[0]] = version;
 			console.log('done', pack[0], version);

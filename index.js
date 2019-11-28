@@ -16,6 +16,9 @@ if (arg.is('bootstrap')) {
 	if (cli.has('registry')) {
 		config.npm = cli.get('registry');
 	}
+	if (cli.has('skip')) {
+		config.skip = cli.get('skip');
+	}
 	const s = new Bootstrap({
 		filter: cli.get('filter'),
 		negative: cli.get('negative'),
