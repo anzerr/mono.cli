@@ -1,5 +1,7 @@
 
 ### `Intro`
+![GitHub Actions status | publish](https://github.com/anzerr/mono.cli/workflows/publish/badge.svg)
+
 Cli to help working on a monorepo using a local npm registry like [verdaccio](https://github.com/verdaccio)
 
 #### `Install`
@@ -7,6 +9,7 @@ Cli to help working on a monorepo using a local npm registry like [verdaccio](ht
 git clone git+https://github.com/anzerr/mono.cli.git &&
 cd mono.cli &&
 npm link
+npm install -g @anzerr/mono.cli
 ```
 
 ### `Example`
