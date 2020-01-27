@@ -2,7 +2,13 @@
 	"name": "mono.cli",
 	"version": "1.0.6",
 	"description": "Cli to help working on monorepos",
-	"keywords": [],
+	"keywords": [
+		"cli",
+		"javascript",
+		"monorepo",
+		"node",
+		"util"
+	],
 	"homepage": "https://github.com/anzerr/mono.cli#readme",
 	"bugs": {
 		"url": "https://github.com/anzerr/mono.cli/issues"
