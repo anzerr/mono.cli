@@ -1,6 +1,6 @@
 {
 	"name": "mono.cli",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"description": "Cli to help working on monorepos",
 	"keywords": [
 		"cli",
