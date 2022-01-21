@@ -27,9 +27,6 @@
 	"scripts": {
 		"test": "node test.js"
 	},
-	"eslintConfig": {
-		"extends": "eslint-config-basic"
-	},
 	"dependencies": {
 		"console.color": "git+https://git@github.com/anzerr/console.color.git",
 		"cli.util": "git+https://git@github.com/anzerr/cli.util.git",
@@ -42,9 +39,7 @@
 		"think.library": "git+https://github.com/anzerr/think.library.git",
 		"unique.util": "git+https://github.com/anzerr/unique.util.git"
 	},
-	"devDependencies": {
-		"eslint-config-basic": "git+https://git@github.com/anzerr/eslintrc.git"
-	},
+	"devDependencies": {},
 	"engines": {
 		"node": ">= 0.10.0"
 	}
